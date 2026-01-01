@@ -73,7 +73,29 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
     const currentProgram = programs.find(p => p.id === activeProgram) || programs[0]
 
     return (
-        <section className="py-16 md:py-24 bg-linear-to-b from-gray-50 to-white">
+        <section className="relative py-16 md:py-24 bg-linear-to-b from-gray-50 to-white overflow-hidden">
+            {/* Decorative Side Images */}
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 
+                w-[300px] md:w-[500px] lg:w-[700px] 
+                opacity-50 pointer-events-none z-0">
+                <img
+                    src="/left_side_img.png"
+                    alt=""
+                    className="w-full h-auto object-contain"
+                />
+            </div>
+
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 
+                w-[300px] md:w-[500px] lg:w-[700px] 
+                opacity-50 pointer-events-none z-0">
+                <img
+                    src="/right_side_img.png"
+                    alt=""
+                    className="w-full h-auto object-contain"
+                />
+            </div>
+
+
             <div className="container mx-auto px-4">
                 {/* Program Tabs */}
                 <div
@@ -103,6 +125,7 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
                         className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500"
                         role="tabpanel"
                     >
+
                         <div className="flex flex-col lg:flex-row">
                             {/* Text Content */}
                             <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center">

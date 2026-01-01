@@ -112,7 +112,29 @@ export default function TestimonialSlider() {
     }, [nextSlide])
 
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gray-900 py-1 px-4">
+        <section className="relative min-h-screen flex items-center justify-center bg-gray-900 py-1 px-4">
+
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 
+                w-[300px] md:w-[500px] lg:w-[700px] 
+                opacity-50 pointer-events-none z-0">
+                <img
+                    src="/left_side_img.png"
+                    alt=""
+                    className="w-full h-auto object-contain"
+                />
+            </div>
+
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 
+                w-[300px] md:w-[500px] lg:w-[700px] 
+                opacity-50 pointer-events-none z-0">
+                <img
+                    src="/right_side_img.png"
+                    alt=""
+                    className="w-full h-auto object-contain"
+                />
+            </div>
+
+
             <div className="relative w-full max-w-4xl mx-auto">
                 {/* Navigation Arrows */}
                 <button

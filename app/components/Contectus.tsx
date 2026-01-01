@@ -119,7 +119,7 @@ const Contact = () => {
       </div>
 
       {/* Shape Image (Optional) */}
-      <div className="hidden xl:block absolute top-[29%] left-[6%] opacity-80">
+      {/* <div className="hidden xl:block absolute top-[29%] left-[6%] opacity-80">
         <Image
           src="/assets/img/shape/shape_8.png"
           width={150}
@@ -127,7 +127,7 @@ const Contact = () => {
           alt="Shape"
           className="animate-pulse"
         />
-      </div>
+      </div> */}
     </section>
   );
 };
