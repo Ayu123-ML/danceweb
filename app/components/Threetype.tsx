@@ -13,18 +13,25 @@ interface Program {
 
 const programs: Program[] = [
     {
+        id: 'service',
+        name: 'SERVICE',
+        title: 'Service',
+        description: 'We provide professional dance services for events, programs, and training, tailored to match the theme, audience, and occasion. Our services combine creativity, discipline, and performance excellence to deliver memorable experiences.',
+        image: '/service_img.png'
+    },
+    {
         id: 'dance',
         name: 'DANCE',
         title: 'Dance',
         description: 'We offer a wide variety of dance genres to help young dancers explore their unique style and creativity. From Bollywood, Hip-Hop, Contemporary, Folk, Classical, Garba, and Semi-Classical to fun freestyle sessions, our curriculum ensures every child gets the chance to learn something new and exciting. Each class is designed to boost confidence, flexibility, discipline, and self-expression.',
-        image: '/homeimg/4H7A9606.JPG'
+        image: '/bollywoodnc/dance_img.jpg'
     },
     {
         id: 'gymnastics',
         name: 'GYMNASTICS',
         title: 'Gymnastics',
         description: 'We offer training across various forms and genres of gymnastics, including basic tumbling, balance skills, flexibility training, rhythmic movements, coordination exercises, and beginner-level artistic gymnastics. Each session is structured to build a strong foundation while keeping learning playful and enjoyable.',
-        image: '/homeimg/DSC_1359.JPG'
+        image: '/gynmastic/gymnastics_images.jpg'
     },
     {
         id: 'drama',
@@ -38,7 +45,7 @@ const programs: Program[] = [
         name: 'MODELING',
         title: 'Modeling',
         description: 'We create structured, child-friendly art experiences that model creativity, confidence, and self-expression. By providing thoughtfully curated materials and guided activities, we ensure children not only enjoy the process but also understand the concepts behind each creation. Our theme-based and seasonal art modules—ranging from festive décor to nature-inspired crafts—help children connect abstract ideas with real-world experiences.',
-        image: '/homeimg/DSC_1663.JPG'
+        image: '/modeling/modeling_img.jpg'
     },
     {
         id: 'drawing',

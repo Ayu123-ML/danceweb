@@ -23,7 +23,7 @@ const Header = () => {
                 { name: "International", path: "/journey/international" },
             ],
         },
-        { name: "Gallery", path: "/gallery" },
+        { name: "Awards", path: "/award" },
         { name: "Blog", path: "/blog" },
         {
             name: "News",

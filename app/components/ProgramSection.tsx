@@ -10,7 +10,7 @@ import Dramatype from './Dramatype'
 import Spiritualtype from './Spiritualtype'
 
 export default function ProgramSection() {
-    const [activeProgram, setActiveProgram] = useState('dance')
+    const [activeProgram, setActiveProgram] = useState('service')
 
     return (
         <>
