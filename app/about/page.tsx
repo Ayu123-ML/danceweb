@@ -84,17 +84,25 @@ export default function AboutPage() {
                         {/* Content */}
                         <div>
                             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold tracking-wide uppercase mb-4">
-                                About The Dance School
+                                About Us
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                                We provide service since 2002
+                                Founded in 2002
                             </h2>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dramatically morph reliable, certified artistic experiences without complex, strategic methodologies. Quickly create frictionless artistic theme areas, completely maximizing confidence, flexibility, and self-expression after simple, engaging deliverables.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                Compellingly expedite end-to-end genre sources (Bollywood, Hip-Hop, Folk, Classical) without compromising foundational discipline. Compellingly exploit maintainable skill development across all age groups within a safe, friendly environment.
-                            </p>
+                            <div className="space-y-4 text-gray-600 leading-relaxed">
+                                <p>
+                                    Founded in 2002 by Director Tirthraj Trivedi with just 14 students, our academy has grown into a prestigious institution that has proudly trained more than 6,000 young learners. Guided by a strong vision to nurture India’s culture, traditions, and values in the next generation, we have become a trusted platform for children aged 4 to 14 years to learn, express, and shine.
+                                </p>
+                                <p>
+                                    We are a Government-Registered Institution, a Government-Approved Vocational Training Centre, and a Trademark-Registered Academy under the Government of India. Our commitment to excellence is further strengthened by certifications from IAF and EGAC for maintaining a high-quality management system.
+                                </p>
+                                <p>
+                                    Our academy has earned international recognition, marking its name in the London Book of World Records and becoming an esteemed member of CIOFF (International Council of Organizations of Folklore Festivals and Folk Arts) and IOV (International Organization of Folk Art). These affiliations allow our students to proudly represent India on global platforms.
+                                </p>
+                                <p>
+                                    With a mission to instill cultural values, discipline, and artistic excellence, we provide world-class training and international-stage opportunities. We strive to shape ambitious, confident, and culturally enriched young minds who carry the pride and authenticity of India across the world.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,23 +177,63 @@ export default function AboutPage() {
                         {/* Vision */}
                         <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Proactively enlighten young minds with India&apos;s timeless culture and spiritual essence, compellingly aspiring to build a generation of global ambassadors. We nurture children into confident and culturally grounded individuals after providing world-class training and international-stage opportunities.
-                            </p>
+                            <div className="space-y-4 text-gray-600 leading-relaxed">
+                                <p>
+                                    Our vision is to enlighten countless young minds with the timeless culture, traditions, and spiritual essence of our nation, empowering them to carry India’s heritage with pride and authenticity across the world. We aspire to build a generation of children who not only learn our values but embody them—becoming global ambassadors of India’s rich legacy.
+                                </p>
+                                <p>
+                                    Through immersive cultural education, value-driven learning, and expressive artistic platforms, we aim to nurture children into confident, compassionate, and culturally grounded individuals. We envision our academy as a place where the vibrance of Indian traditions merges seamlessly with the curiosity and creativity of young learners, shaping them into powerful voices of representation on international stages.
+                                </p>
+                                <p>
+                                    By instilling deep-rooted respect for our heritage and providing opportunities for global exposure, we strive to make our children the shining symbols of India’s honour, authenticity, and artistic brilliance. Our vision is to see India celebrated across the globe through the talent, discipline, and cultural resonance of its youngest generation—children who make the world experience the beauty of our nation through their actions, performances, and values.
+                                </p>
+                            </div>
                         </div>
 
                         {/* Awards */}
                         <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Awards</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Compellingly leverage the London Book of World Records recognition and Government Registered status, establishing a trusted benchmark for artistic training. Proactively champion UNESCO-affiliated programs (CIOFF/IOV) whereas amplifying influence through 200+ global media features.
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Awards & Recognition</h3>
+                            <div className="space-y-4 text-gray-600 leading-relaxed">
+                                <p>
+                                    Our journey is defined by a consistent pursuit of excellence, earning us prestigious recognition on both national and international stages. We take immense pride in being featured in the London Book of World Records, a testament to the dedication of our students and the visionary leadership that drives our academy. This global milestone reflects our commitment to setting high standards in artistic training and cultural representation.
+                                </p>
+                                <p>
+                                    As a Government-Registered Institution and a Government-Approved Vocational Training Centre, we operate with the highest levels of credibility and trust. Our academy is also Trademark-Registered under the Government of India, further supported by certifications from IAF and EGAC for maintaining a high-quality management system. These credentials ensure that every student is part of a professionally recognized and secure educational environment.
+                                </p>
+                                <p>
+                                    Beyond institutional excellence, we are proud members of CIOFF and IOV—the premier international organizations for folklore and folk art affiliated with UNESCO. This allows our students to represent India’s rich heritage on global platforms worldwide. Our mission has been celebrated by the press, with features in over 200 print media articles and 60+ news channels highlighting our impact.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Media Journey Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+                        <div className="max-w-3xl mx-auto text-center mb-12">
+                            <span className="text-primary-600 font-semibold tracking-wider uppercase text-sm mb-3 block">Recognized Globally, Celebrated Nationally</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 font-serif">Our Media Journey</h2>
+                            <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+                        </div>
+                        <div className="grid lg:grid-cols-3 gap-10 text-gray-600 leading-relaxed text-lg">
+                            <p>
+                                The media has played a pivotal role in documenting our academy’s growth, sharing our story of cultural preservation with the world. We are profoundly grateful for the recognition received from respected media houses, whose coverage has highlighted our initiatives in over 200 print articles. These features celebrate our dedication to youth development and our contributions to the global artistic community.
+                            </p>
+                            <p>
+                                Our mission has been further amplified through more than 60 electronic media and press news channels, bringing our vision into countless homes nationwide. This consistent national presence has been instrumental in establishing our academy as a trusted name for cultural education. By sharing our students&apos; accomplishments, these platforms have helped us inspire a new generation to embrace their heritage with pride.
+                            </p>
+                            <p>
+                                Internationally, our efforts to spread Indian culture have been featured in over 50 articles and interviews across prominent global platforms. This overwhelming support from the international media has not only bolstered our credibility but has also motivated us to advance our mission with even greater passion. We continue to strive for excellence, honored by the global community&apos;s embrace of our journey.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <Team />
+            {/* <Team /> */}
 
             {/* CTA Section */}
             <section className="py-20 bg-linear-to-r from-primary-600 to-primary-800">

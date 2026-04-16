@@ -8,7 +8,7 @@ const HeroScroll = () => {
     const slides = [
         {
             id: 1,
-            image: '/homeimg/4H7A4034.jpg',
+            image: '/homeimg/2025UK.jpeg',
             title: 'Classical Dance Excellence',
             subtitle: 'Master the art of Bharatanatyam, Kathak & Odissi',
             description: 'Learn from award-winning gurus with 20+ years of experience',
@@ -26,7 +26,7 @@ const HeroScroll = () => {
         },
         {
             id: 3,
-            image: '/homeimg/DSC_1187.jpg',
+            image: '/homeimg/IMG_5323.jpeg',
             title: 'Cultural Folk Dances',
             subtitle: 'Celebrate India\'s rich cultural heritage',
             description: 'Garba, Bhangra, Lavani & more traditional forms',
@@ -35,7 +35,7 @@ const HeroScroll = () => {
         },
         {
             id: 4,
-            image: '/homeimg/DSC_1597.jpg',
+            image: '/homeimg/DSC08704.jpeg',
             title: 'Bollywood Fusion',
             subtitle: 'Dance like your favorite stars',
             description: 'High-energy classes with latest Bollywood tracks',
@@ -45,6 +45,42 @@ const HeroScroll = () => {
         {
             id: 5,
             image: '/homeimg/DSC_1663.jpg',
+            title: 'International Styles',
+            subtitle: 'Ballet, Hip-Hop, Salsa & more',
+            description: 'Global dance forms taught by international instructors',
+            cta: 'Learn International Styles',
+            color: 'from-green-900/50 to-green-700/50',
+        },
+        {
+            id: 6,
+            image: '/homeimg/DSC_0940.jpeg',
+            title: 'International Styles',
+            subtitle: 'Ballet, Hip-Hop, Salsa & more',
+            description: 'Global dance forms taught by international instructors',
+            cta: 'Learn International Styles',
+            color: 'from-green-900/50 to-green-700/50',
+        },
+        {
+            id: 7,
+            image: '/homeimg/DSC_0041.jpeg',
+            title: 'International Styles',
+            subtitle: 'Ballet, Hip-Hop, Salsa & more',
+            description: 'Global dance forms taught by international instructors',
+            cta: 'Learn International Styles',
+            color: 'from-green-900/50 to-green-700/50',
+        },
+        {
+            id: 8,
+            image: '/homeimg/IMG_0011.jpeg',
+            title: 'International Styles',
+            subtitle: 'Ballet, Hip-Hop, Salsa & more',
+            description: 'Global dance forms taught by international instructors',
+            cta: 'Learn International Styles',
+            color: 'from-green-900/50 to-green-700/50',
+        },
+        {
+            id: 9,
+            image: '/homeimg/IMG_4237.jpeg',
             title: 'International Styles',
             subtitle: 'Ballet, Hip-Hop, Salsa & more',
             description: 'Global dance forms taught by international instructors',
@@ -89,7 +125,7 @@ const HeroScroll = () => {
     }
 
     return (
-        <div className="relative h-screen w-full overflow-hidden group">
+        <div className="relative h-[90vh] w-full overflow-hidden group">
             {/* Slides */}
             <div className="relative h-full w-full">
                 {slides.map((slide, index) => (
@@ -109,20 +145,20 @@ const HeroScroll = () => {
                             <div className="absolute inset-0 flex items-center">
                                 <div className="container mx-auto px-8">
                                     <div className="max-w-2xl">
-                                        <div className="mb-4">
+                                        {/* <div className="mb-4">
                                             <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                                                 Featured Course
                                             </span>
-                                        </div>
-                                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-serif leading-tight">
+                                        </div> */}
+                                        {/* <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-serif leading-tight">
                                             {slide.title}
-                                        </h1>
-                                        <h2 className="text-2xl md:text-3xl text-white/90 mb-4">
+                                        </h1> */}
+                                        {/* <h2 className="text-2xl md:text-3xl text-white/90 mb-4">
                                             {slide.subtitle}
                                         </h2>
                                         <p className="text-lg text-white/80 mb-8 max-w-xl">
                                             {slide.description}
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                             </div>

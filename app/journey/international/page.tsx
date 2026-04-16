@@ -5,6 +5,7 @@ import Link from 'next/link'
 import InternationalGallery from './InternationalGallery'
 
 // Helper to get all events/years from the internatimg folder
+// Helper to get all events/years from the internatimg folder
 function getInternationalEvents() {
     const imagesDirectory = path.join(process.cwd(), 'public/internatimg')
 
@@ -13,8 +14,18 @@ function getInternationalEvents() {
 
     const items = fs.readdirSync(imagesDirectory)
 
-    // Filter for directories (years/events) and also include individual files in a "General" category if needed
-    // For now based on requirements, we look for folders
+    // Manual metadata mapping for folders to match image style
+    const metadataMap: Record<string, { yearMonth: string, flag: string, country: string, festival: string }> = {
+        'LONDON 2012': { yearMonth: '2012 | JULY', flag: 'gb', country: 'UK', festival: 'WORLD CULTURAL FESTIVAL LONDON' },
+        'LONDON 2015': { yearMonth: '2015 | AUGUST', flag: 'gb', country: 'UK', festival: 'INTERNATIONAL FOLK FESTIVAL' },
+        'LONDON 2018': { yearMonth: '2018 | JUNE', flag: 'gb', country: 'UK', festival: 'EUROPEAN FOLKESTRA' },
+        'FRANCE 2015': { yearMonth: '2015 | JULY', flag: 'fr', country: 'FRANCE', festival: 'FESTIVAL DES CULTURES DU MONDE' },
+        'POLAND 2010': { yearMonth: '2010 | AUGUST', flag: 'pl', country: 'POLAND', festival: 'INTERNATIONAL FESTIVAL OF FOLKLORE' },
+        'CYPRUS': { yearMonth: '2017 | SEPT', flag: 'cy', country: 'CYPRUS', festival: 'INTERNATIONAL FOLK DANCE FESTIVAL' },
+        '2023': { yearMonth: '2023 | JAN', flag: 'in', country: 'INDIA', festival: 'WORLD RECORD TRIBUTE TO MAHATMA GANDHI' },
+        '2019': { yearMonth: '2019 | MATCH', flag: 'in', country: 'INDIA', festival: 'NATIONAL CULTURAL EXCHANGE' },
+    }
+
     const events = items.filter(item => {
         const fullPath = path.join(imagesDirectory, item)
         return fs.statSync(fullPath).isDirectory()
@@ -22,24 +33,29 @@ function getInternationalEvents() {
         const dirPath = path.join(imagesDirectory, dirName)
         const files = fs.readdirSync(dirPath)
 
-        // Filter for image files
         const images = files
             .filter(file => /\.(jpg|jpeg|png|webp|JPG|JPEG|PNG)$/.test(file))
             .map(file => `/internatimg/${dirName}/${file}`)
 
+        const meta = metadataMap[dirName] || {
+            yearMonth: dirName.match(/\d{4}/) ? `${dirName.match(/\d{4}/)?.[0]} | EVENT` : `${dirName} | EVENT`,
+            flag: dirName.toLowerCase().includes('london') ? 'gb' : 'in',
+            country: dirName.toUpperCase(),
+            festival: 'INTERNATIONAL CULTURAL PERFORMANCE'
+        }
+
         return {
             name: dirName,
             images,
-            // Try to extract a year for sorting, default to 0 if not found
+            yearMonth: meta.yearMonth,
+            flag: meta.flag,
+            country: meta.country,
+            festivalName: meta.festival,
             year: parseInt(dirName.match(/\d{4}/)?.[0] || '0')
         }
     })
 
-    // Sort by year descending (newest first), then by name
-    return events.sort((a, b) => {
-        if (b.year !== a.year) return b.year - a.year
-        return b.name.localeCompare(a.name)
-    })
+    return events.sort((a, b) => b.year - a.year)
 }
 
 export default function InternationalJourneyPage() {

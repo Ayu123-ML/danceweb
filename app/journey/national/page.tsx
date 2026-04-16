@@ -109,11 +109,11 @@ export default function NationalJourneyPage() {
                                     </div>
                                 </div>
 
-                                {image.caption && (
+                                {/* {image.caption && (
                                     <figcaption className="p-4">
                                         <p className="text-gray-700 text-sm">{image.caption}</p>
                                     </figcaption>
-                                )}
+                                )} */}
                             </figure>
                         ))}
                     </div>

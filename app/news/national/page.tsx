@@ -90,11 +90,11 @@ export default function NationalNewsPage() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 </div>
 
-                                {news.caption && (
+                                {/* {news.caption && (
                                     <figcaption className="p-4 border-t border-gray-100">
                                         <p className="text-gray-700 text-sm font-medium">{news.caption}</p>
                                     </figcaption>
-                                )}
+                                )} */}
                             </figure>
                         ))}
                     </div>
