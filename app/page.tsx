@@ -8,6 +8,7 @@ import TextScroll from '@/app/components/Textscroll'
 import Contactus from '@/app/components/Contectus'
 import ProgramSection from './components/ProgramSection'
 import Testimonial from './components/Testimonial'
+import Awards from './components/Awards'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TextScroll />
       <ProgramSection />
       <UpcomingEvents />
+      <Awards />
       <Testimonial />
       <hr className="text-white" />
       {/* <Team /> */}
