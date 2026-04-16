@@ -9,6 +9,7 @@ interface Program {
     title: string
     description: string
     image: string
+    color: string
 }
 
 const programs: Program[] = [
@@ -17,49 +18,56 @@ const programs: Program[] = [
         name: 'SERVICE',
         title: 'Service',
         description: 'We provide professional dance services for events, programs, and training, tailored to match the theme, audience, and occasion. Our services combine creativity, discipline, and performance excellence to deliver memorable experiences.',
-        image: '/serviceimg.png'
+        image: '/serviceimg.png',
+        color: '#E31E24'
     },
     {
         id: 'dance',
         name: 'DANCE',
         title: 'Dance',
         description: 'We offer a wide variety of dance genres to help young dancers explore their unique style and creativity. From Bollywood, Hip-Hop, Contemporary, Folk, Classical, Garba, and Semi-Classical to fun freestyle sessions, our curriculum ensures every child gets the chance to learn something new and exciting. Each class is designed to boost confidence, flexibility, discipline, and self-expression.',
-        image: '/bollywoodnc/dance_img.jpg'
+        image: '/bollywoodnc/dance_img.jpg',
+        color: '#B0CB1F'
     },
     {
         id: 'gymnastics',
         name: 'GYMNASTICS',
         title: 'Gymnastics',
         description: 'We offer training across various forms and genres of gymnastics, including basic tumbling, balance skills, flexibility training, rhythmic movements, coordination exercises, and beginner-level artistic gymnastics. Each session is structured to build a strong foundation while keeping learning playful and enjoyable.',
-        image: '/aboutimg/gymnastic-img.png'
+        image: '/aboutimg/gymnastic-img.png',
+        color: '#EF7F1A'
     },
     {
         id: 'drama',
         name: 'DRAMA SPEAKING',
         title: 'Drama & Speaking',
         description: 'Through interactive sessions, children explore voice modulation, storytelling, dialogues, stage presence, and expressive movement. We believe learning should be engaging and practical, which is why our curriculum includes theatre visits, curated movie screenings, role-play activities, and hands-on performance workshops that bring real-world experiences into the classroom.',
-        image: '/homeimg/Drama-Speaking.png'
+        image: '/homeimg/Drama-Speaking.png',
+        color: '#008DD2'
     },
     {
         id: 'modeling',
         name: 'MODELING',
         title: 'Modeling',
         description: 'We create structured, child-friendly art experiences that model creativity, confidence, and self-expression. By providing thoughtfully curated materials and guided activities, we ensure children not only enjoy the process but also understand the concepts behind each creation. Our theme-based and seasonal art modules—ranging from festive décor to nature-inspired crafts—help children connect abstract ideas with real-world experiences.',
-        image: '/modeling/modeling_img.jpg'
+        image: '/modeling/modeling_img.jpg',
+        color: '#CB5499'
     },
     {
         id: 'drawing',
         name: 'DRAWING',
         title: 'Drawing',
         description: 'We provide well-maintained, safe, and high-quality art equipment, ensuring that every child enjoys a smooth and engaging learning experience. To keep creativity alive throughout the year, we offer seasonal and festival-based art activities—from making Diwali lanterns to Christmas ornaments and vibrant summer crafts. These hands-on projects help children learn about culture, nature, and real-world concepts through the joyful medium of art.',
-        image: '/homeimg/image.png'
+        image: '/homeimg/image.png',
+        color: '#6A5ACD'
     },
     {
         id: 'spiritual',
         name: 'SPIRITUAL',
         title: 'Spiritual',
         description: 'We introduce children to the richness of our heritage through interactive storytelling, soulful bhajans, cultural activities, and thought-provoking sessions that encourage mindfulness, kindness, and emotional awareness. Each class is crafted to help children understand the roots of our traditions while developing confidence, discipline, and a positive outlook.',
-        image: '/homeimg/spritualimg.png'
+        image: '/homeimg/spritualimg.png',
+        color: '#E31E24'
     }
 ]
 
@@ -107,9 +115,17 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
                         <button
                             key={program.id}
                             onClick={() => setActiveProgram(program.id)}
-                            className={`px-6 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-300 whitespace-nowrap ${activeProgram === program.id
-                                ? 'bg-linear-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30 scale-105'
-                                : 'bg-white text-gray-700 border border-gray-200 hover:border-primary-300 hover:text-primary-600 hover:shadow-md'
+                            style={{
+                                backgroundColor: activeProgram === program.id ? program.color : 'white',
+                                borderColor: activeProgram === program.id ? program.color : '#e5e7eb',
+                                color: activeProgram === program.id ? 'white' : '#374151',
+                                boxShadow: activeProgram === program.id
+                                    ? `0 10px 15px -3px ${program.color}40, 0 4px 6px -4px ${program.color}40`
+                                    : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
+                            }}
+                            className={`px-8 py-4 rounded-xl font-bold text-sm md:text-base border transition-all duration-300 whitespace-nowrap uppercase tracking-wider ${activeProgram === program.id
+                                ? 'scale-105 shadow-xl'
+                                : 'hover:border-gray-300 hover:shadow-md hover:-translate-y-0.5'
                                 }`}
                             role="tab"
                             aria-selected={activeProgram === program.id}

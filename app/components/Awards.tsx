@@ -1,0 +1,101 @@
+'use client'
+
+import { useState, useEffect, useCallback } from 'react'
+import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+
+const awardImages = [
+    '/awardimg/01.jpg',
+    '/awardimg/02.jpg',
+    '/awardimg/03.jpg',
+    '/awardimg/04.jpg',
+    '/awardimg/05.jpg',
+    '/awardimg/06.jpg',
+    '/awardimg/07.jpg',
+    '/awardimg/08.jpg',
+    '/awardimg/09.jpg',
+    '/awardimg/10.jpg',
+    '/awardimg/11.jpg',
+    '/awardimg/12.jpg',
+    '/awardimg/13.jpg',
+]
+
+export default function Awards() {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const nextSlide = useCallback(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % awardImages.length)
+    }, [])
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + awardImages.length) % awardImages.length)
+    }
+
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 3000)
+        return () => clearInterval(timer)
+    }, [nextSlide])
+
+    return (
+        <section className="py-16 bg-white overflow-hidden w-full flex flex-col items-center">
+            <div className="w-full px-4 max-w-[1600px]">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-12 tracking-tight">
+                    AWARDS
+                </h2>
+
+                <div className="relative w-full mx-auto">
+                    {/* Main Image Container (Enlarged and Proportional) */}
+                    <div className="relative h-[300px] md:h-[650px] w-full overflow-hidden shadow-2xl border-white transition-all duration-300">
+                        <div
+                            className="flex h-full w-full transition-transform duration-700 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {awardImages.map((image, index) => (
+                                <div key={index} className="min-w-full h-full relative">
+                                    <Image
+                                        src={image}
+                                        alt={`Award ${index + 1}`}
+                                        fill
+                                        className="object-cover"
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Arrows */}
+                        <button
+                            onClick={prevSlide}
+                            className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-lg text-gray-900 p-4 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+                            aria-label="Previous slide"
+                        >
+                            <ChevronLeft className="w-8 h-8" />
+                        </button>
+                        <button
+                            onClick={nextSlide}
+                            className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-lg text-gray-900 p-4 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+                            aria-label="Next slide"
+                        >
+                            <ChevronRight className="w-8 h-8" />
+                        </button>
+
+                        {/* Indicators */}
+                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                            {awardImages.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentIndex(index)}
+                                    className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                                        ? 'bg-gray-900 w-10'
+                                        : 'bg-gray-400 hover:bg-gray-600 w-4'
+                                        }`}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
