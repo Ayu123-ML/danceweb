@@ -39,13 +39,20 @@ export default function Awards() {
     return (
         <section className="py-16 bg-white overflow-hidden w-full flex flex-col items-center">
             <div className="w-full px-4 max-w-[1600px]">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-12 tracking-tight">
-                    AWARDS
-                </h2>
+                <div className="text-center mb-12">
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                        <span className="text-amber-400 text-2xl">✦</span>
+                        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+                            AWARDS
+                        </h2>
+                        <span className="text-amber-400 text-2xl">✦</span>
+                    </div>
+                    <div className="w-16 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto" />
+                </div>
 
                 <div className="relative w-full mx-auto">
                     {/* Main Image Container (Enlarged and Proportional) */}
-                    <div className="relative h-[300px] md:h-[650px] w-full overflow-hidden shadow-2xl border-white transition-all duration-300">
+                    <div className="relative h-[500px] md:h-[750px] w-full overflow-hidden shadow-2xl border-white transition-all duration-300">
                         <div
                             className="flex h-full w-full transition-transform duration-700 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

@@ -8,6 +8,8 @@ import TextScroll from '@/app/components/Textscroll'
 import Contactus from '@/app/components/Contectus'
 import ProgramSection from './components/ProgramSection'
 import Testimonial from './components/Testimonial'
+import Country from './components/Country'
+import Awards from './components/Awards'
 
 export default function Home() {
   return (
@@ -15,9 +17,9 @@ export default function Home() {
       <HeroScroll />
       <TextScroll />
       <ProgramSection />
+      <Awards />
       <Country />
       <UpcomingEvents />
-      <Awards />
       <Testimonial />
       <hr className="text-white" />
       {/* <Team /> */}

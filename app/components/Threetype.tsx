@@ -25,7 +25,7 @@ const programs: Program[] = [
         id: 'dance',
         name: 'DANCE',
         title: 'Dance',
-        description: 'We offer a wide variety of dance genres to help young dancers explore their unique style and creativity. From Bollywood, Hip-Hop, Contemporary, Folk, Classical, Garba, and Semi-Classical to fun freestyle sessions, our curriculum ensures every child gets the chance to learn something new and exciting. Each class is designed to boost confidence, flexibility, discipline, and self-expression.',
+        description: 'At our academy, we inspire children aged 4 to 14 years to discover the joy of movement through a warm, friendly, and encouraging environment. Our teaching style is simple, engaging, and child-friendly, making every session fun, comfortable, and easy to follow—even for complete beginners.\n\nWe offer a wide variety of dance genres to help young dancers explore their unique style and creativity. From Bollywood, Hip-Hop, Contemporary, Folk, Classical, Garba, and Semi-Classical to fun freestyle sessions, our curriculum ensures every child gets the chance to learn something new and exciting. Each class is designed to boost confidence, flexibility, discipline, and self-expression.\n\nOur instructors understand the needs of each age group and use interactive techniques, storytelling, and step-by-step guidance so children learn effortlessly while enjoying every moment. Along with technique, we focus on teamwork, positivity, and building a strong foundation in rhythm and coordination.\n\nJoin us and let your child explore the world of dance in a safe, happy, and creative space.',
         image: '/bollywoodnc/dance_img.jpg',
         color: '#B0CB1F'
     },
@@ -33,7 +33,7 @@ const programs: Program[] = [
         id: 'gymnastics',
         name: 'GYMNASTICS',
         title: 'Gymnastics',
-        description: 'We offer training across various forms and genres of gymnastics, including basic tumbling, balance skills, flexibility training, rhythmic movements, coordination exercises, and beginner-level artistic gymnastics. Each session is structured to build a strong foundation while keeping learning playful and enjoyable.',
+        description: 'At our academy, we provide a joyful, energetic, and supportive environment for children aged 4 to 12 years to learn, grow, and thrive through gymnastics. Our friendly mentors follow an easy and engaging teaching style, ensuring that every child feels comfortable, confident, and excited to participate.\n\nWe offer training across various forms and genres of gymnastics, including basic tumbling, balance skills, flexibility training, rhythmic movements, coordination exercises, and beginner-level artistic gymnastics. Each session is structured to build a strong foundation while keeping learning playful and enjoyable.\n\nSafety is our top priority. Our academy follows strict safety protocols, with well-trained instructors supervising every activity. We use well-maintained, high-quality equipment designed specifically for young learners, ensuring a secure and worry-free experience for parents and children alike.\n\nWhether your child is just beginning or ready to advance, we focus on step-by-step training, motivating them to discover their potential with positivity and discipline.\n\nJoin us to give your child an exciting opportunity to develop strength, flexibility, confidence, and lifelong fitness habits—all in a safe, friendly, and inspiring space!',
         image: '/aboutimg/gymnastic-img.png',
         color: '#EF7F1A'
     },
@@ -41,7 +41,7 @@ const programs: Program[] = [
         id: 'drama',
         name: 'DRAMA SPEAKING',
         title: 'Drama & Speaking',
-        description: 'Through interactive sessions, children explore voice modulation, storytelling, dialogues, stage presence, and expressive movement. We believe learning should be engaging and practical, which is why our curriculum includes theatre visits, curated movie screenings, role-play activities, and hands-on performance workshops that bring real-world experiences into the classroom.',
+        description: 'At our Children’s Academy, we specialize in Drama and Public Speaking for children aged 4 to 14 years, creating a warm, friendly, and encouraging environment where every child feels free to express themselves. Our programs are designed to nurture creativity, build confidence, and help young minds develop strong communication skills.\n\nThrough interactive sessions, children explore voice modulation, storytelling, dialogues, stage presence, and expressive movement. We believe learning should be engaging and practical, which is why our curriculum includes theatre visits, curated movie screenings, role-play activities, and hands-on performance workshops that bring real-world experiences into the classroom.\n\nAdding to this enriching journey, we host celebrity guests, industry professionals, and field experts who conduct exclusive masterclasses—offering children rare exposure and inspiring guidance.\n\nWith expert mentors and a positive, child-friendly atmosphere, we aim to shape confident speakers, expressive performers, and thoughtful young individuals ready to shine on any stage.\n\nJoin us and let your child discover the power of expression.',
         image: '/homeimg/Drama-Speaking.png',
         color: '#008DD2'
     },
@@ -57,7 +57,7 @@ const programs: Program[] = [
         id: 'drawing',
         name: 'DRAWING',
         title: 'Drawing',
-        description: 'We provide well-maintained, safe, and high-quality art equipment, ensuring that every child enjoys a smooth and engaging learning experience. To keep creativity alive throughout the year, we offer seasonal and festival-based art activities—from making Diwali lanterns to Christmas ornaments and vibrant summer crafts. These hands-on projects help children learn about culture, nature, and real-world concepts through the joyful medium of art.',
+        description: 'Our curriculum covers a wide range of art genres and techniques, including basic drawing, sketching, shading, color theory, character drawing, creative craftwork, and theme-based artwork. Each session is designed to strengthen creativity, focus, and fine motor skills while allowing children to express their individuality.\n\nWe provide well-maintained, safe, and high-quality art equipment, ensuring that every child enjoys a smooth and engaging learning experience. To keep creativity alive throughout the year, we offer seasonal and festival-based art activities—from making Diwali lanterns to Christmas ornaments and vibrant summer crafts. These hands-on projects help children learn about culture, nature, and real-world concepts through the joyful medium of art.\n\nWith dedicated guidance and a warm atmosphere, our academy helps children discover their artistic potential and build a love for creativity that lasts a lifetime.',
         image: '/homeimg/image.png',
         color: '#6A5ACD'
     },
@@ -65,7 +65,7 @@ const programs: Program[] = [
         id: 'spiritual',
         name: 'SPIRITUAL',
         title: 'Spiritual',
-        description: 'We introduce children to the richness of our heritage through interactive storytelling, soulful bhajans, cultural activities, and thought-provoking sessions that encourage mindfulness, kindness, and emotional awareness. Each class is crafted to help children understand the roots of our traditions while developing confidence, discipline, and a positive outlook.',
+        description: 'In today’s fast-paced world, where western influences are rapidly shaping young lifestyles, our Children’s Academy is committed to preserving the essence of Indian culture, spirituality, and tradition. Designed for children aged 4 to 14 years, our programs blend engaging learning with meaningful values that stay for life.\n\nWe introduce children to the richness of our heritage through interactive storytelling, soulful bhajans, cultural activities, and thought-provoking sessions that encourage mindfulness, kindness, and emotional awareness. Each class is crafted to help children understand the roots of our traditions while developing confidence, discipline, and a positive outlook.\n\nOur approach is modern yet deeply connected to our cultural identity. Through creative formats—songs, stories, festivals, meditation, and value-based activities—we ensure that learning spirituality becomes joyful, relatable, and inspiring for every child.\n\nAt our academy, we believe that strong cultural grounding shapes strong individuals. By nurturing both intellect and inner values, we aim to guide children towards becoming compassionate, confident, and culturally aware citizens of tomorrow.',
         image: '/homeimg/spritualimg.png',
         color: '#E31E24'
     }
@@ -148,9 +148,13 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
                                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                                     {currentProgram.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-                                    {currentProgram.description}
-                                </p>
+                                <div className="text-gray-600 leading-relaxed text-base md:text-lg">
+                                    {currentProgram.description.split('\n\n').map((paragraph, idx) => (
+                                        <p key={idx} className="mb-4 last:mb-0">
+                                            {paragraph}
+                                        </p>
+                                    ))}
+                                </div>
                                 <div className="mt-8">
                                     {/* <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5">
                                         Learn More
