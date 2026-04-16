@@ -9,7 +9,7 @@ const Contact = () => {
           {/* Left Image */}
           <div>
             <Image
-              src="/assets/img/0011.jpg"
+              src="/contact-us.jpg"
               width={600}
               height={700}
               alt="Contact Image"
@@ -21,7 +21,7 @@ const Contact = () => {
           <div>
             {/* Title */}
             <div className="mb-8">
-              <span className="text-pink-500 text-sm uppercase tracking-wide">
+              <span className="text-red-700 text-sm uppercase tracking-wide">
                 Get In Touch
               </span>
               <h2 className="text-3xl font-bold text-white mt-2">
@@ -46,7 +46,7 @@ const Contact = () => {
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-pink-500"
+                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-red-700"
                   />
                   <i className="fal fa-user absolute right-3 top-3 text-gray-400"></i>
                 </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     placeholder="Your Email"
-                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-pink-500"
+                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-red-700"
                   />
                   <i className="fal fa-envelope absolute right-3 top-3 text-gray-400"></i>
                 </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                     type="tel"
                     name="number"
                     placeholder="Phone Number"
-                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-pink-500"
+                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-red-700"
                   />
                   <i className="fa-regular fa-phone-flip absolute right-3 top-3 text-gray-400"></i>
                 </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                 <div>
                   <select defaultValue=""
                     name="subject"
-                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-pink-500"
+                    className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-red-700"
                   >
                     <option value="" disabled hidden>
                       Select Subject
@@ -101,7 +101,7 @@ const Contact = () => {
                   name="message"
                   rows={4}
                   placeholder="Your Message"
-                  className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-pink-500"
+                  className="w-full bg-white/10 text-white p-3 rounded-lg outline-none border border-white/20 focus:border-red-700"
                 ></textarea>
                 <i className="fal fa-comment absolute right-3 top-3 text-gray-400"></i>
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
               {/* Button */}
               <button
                 type="submit"
-                className="bg-pink-600 hover:bg-pink-700 text-white py-3 px-8 rounded-lg w-full md:w-auto transition"
+                className="bg-red-800 hover:bg-red-900 text-white py-3 px-8 rounded-lg w-full md:w-auto transition"
               >
                 Send Message
               </button>

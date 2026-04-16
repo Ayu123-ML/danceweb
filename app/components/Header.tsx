@@ -33,7 +33,7 @@ const Header = () => {
                 { name: "International", path: "/news/international" },
             ],
         },
-        { name: "Contact", path: "/contact" },
+        // { name: "Contact", path: "/contact" },
     ];
 
     useEffect(() => {
@@ -58,12 +58,7 @@ const Header = () => {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center space-x-3 group">
-                            {/* <div className="h-12 w-12 bg-linear-to-br from-pink-500 to-yellow-400 rounded-full flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-                                <span className="text-white font-bold text-2xl">रंग</span>
-                            </div> */}
                             <div>
-                                {/* <h1 className="text-3xl font-bold text-gray-900 font-serif">RangSagar</h1> */}
-                                {/* <p className="text-sm text-gray-600">Dance Academy</p> */}
                                 <Image
                                     src="/logodance.png"
                                     alt="Danza"
@@ -119,7 +114,7 @@ const Header = () => {
                         {/* CTA Buttons */}
                         <div className="hidden lg:flex items-center space-x-4">
                             <Link href="/contact" className="inline-block bg-primary-600 text-white px-4 py-2 rounded-md font-medium hover:bg-primary-700 transition">
-                                Free Trial
+                                Contact Us
                             </Link>
                         </div>
 

@@ -18,7 +18,7 @@ export default function Home() {
       <UpcomingEvents />
       <Testimonial />
       <hr className="text-white" />
-      <Team />
+      {/* <Team /> */}
       <Contactus />
     </div>
   )

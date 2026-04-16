@@ -102,7 +102,7 @@ const HeroScroll = () => {
                             className="h-full w-full bg-cover bg-center bg-no-repeat"
                             style={{ backgroundImage: `url(${slide.image})` }}
                         >
-                            <div className={`absolute inset-0 bg-linear-to-r ${slide.color}`}></div>
+                            {/* <div className={`absolute inset-0 bg-linear-to-r ${slide.color}`}></div> */}
 
 
 

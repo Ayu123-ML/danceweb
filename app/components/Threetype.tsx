@@ -17,7 +17,7 @@ const programs: Program[] = [
         name: 'SERVICE',
         title: 'Service',
         description: 'We provide professional dance services for events, programs, and training, tailored to match the theme, audience, and occasion. Our services combine creativity, discipline, and performance excellence to deliver memorable experiences.',
-        image: '/service_img.png'
+        image: '/serviceimg.png'
     },
     {
         id: 'dance',
@@ -31,7 +31,7 @@ const programs: Program[] = [
         name: 'GYMNASTICS',
         title: 'Gymnastics',
         description: 'We offer training across various forms and genres of gymnastics, including basic tumbling, balance skills, flexibility training, rhythmic movements, coordination exercises, and beginner-level artistic gymnastics. Each session is structured to build a strong foundation while keeping learning playful and enjoyable.',
-        image: '/gynmastic/gymnastics_images.jpg'
+        image: '/aboutimg/gymnastic-img.png'
     },
     {
         id: 'drama',
@@ -77,21 +77,21 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
             {/* Decorative Side Images */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 
                 w-[300px] md:w-[500px] lg:w-[700px] 
-                opacity-50 pointer-events-none z-0">
+                opacity-100 pointer-events-none z-10">
                 <img
-                    src="/left_side_img.png"
+                    src="/aboutimg/DANCING-GIRL.png"
                     alt=""
-                    className="w-full h-auto object-contain"
+                    className="w-full h-150 object-contain"
                 />
             </div>
 
             <div className="absolute top-1/2 right-0 -translate-y-1/2 
                 w-[300px] md:w-[500px] lg:w-[700px] 
-                opacity-50 pointer-events-none z-0">
+                opacity-100 pointer-events-none z-10">
                 <img
-                    src="/right_side_img.png"
+                    src="/aboutimg/DANCING-GIRL-right.png"
                     alt=""
-                    className="w-full h-auto object-contain"
+                    className="w-full h-150 object-contain"
                 />
             </div>
 
