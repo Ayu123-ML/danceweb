@@ -52,7 +52,7 @@ export default function Awards() {
 
                 <div className="relative w-full mx-auto">
                     {/* Main Image Container (Enlarged and Proportional) */}
-                    <div className="relative h-[500px] md:h-[750px] w-full overflow-hidden shadow-2xl border-white transition-all duration-300">
+                    <div className="relative h-[1000px] md:h-[550px] w-[1550px] overflow-hidden shadow-2xl border-white transition-all duration-300 ">
                         <div
                             className="flex h-full w-full transition-transform duration-700 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

@@ -28,9 +28,9 @@ export default function InternationalGallery({ events }: InternationalGalleryPro
     // Auto-scroll when an event is selected
     useEffect(() => {
         if (activeTab && galleryRef.current) {
-            galleryRef.current.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
+            galleryRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             })
         }
     }, [activeTab])
@@ -43,7 +43,7 @@ export default function InternationalGallery({ events }: InternationalGalleryPro
                     <table className="w-full text-left border-collapse min-w-[700px]">
                         <thead>
                             <tr className="bg-gray-50/50 border-b border-gray-100">
-                                <th className="px-8 py-6 text-xl font-bold text-gray-700">Year/Month</th>
+                                <th className="px-8 py-6 text-xl font-bold text-gray-700">Year</th>
                                 <th className="px-8 py-6 text-xl font-bold text-gray-700">Flags</th>
                                 <th className="px-8 py-6 text-xl font-bold text-gray-700">Country</th>
                                 <th className="px-8 py-6 text-xl font-bold text-gray-700">Festival Name</th>
@@ -51,18 +51,16 @@ export default function InternationalGallery({ events }: InternationalGalleryPro
                         </thead>
                         <tbody>
                             {events.map((event) => (
-                                <tr 
+                                <tr
                                     key={event.name}
                                     onClick={() => setActiveTab(event.name)}
-                                    className={`group cursor-pointer transition-all duration-300 border-b last:border-0 border-gray-50 hover:bg-pink-50/30 ${
-                                        activeTab === event.name ? 'bg-pink-50/50' : ''
-                                    }`}
+                                    className={`group cursor-pointer transition-all duration-300 border-b last:border-0 border-gray-50 hover:bg-pink-50/30 ${activeTab === event.name ? 'bg-pink-50/50' : ''
+                                        }`}
                                 >
                                     {/* Year/Month Badge */}
                                     <td className="px-8 py-6">
-                                        <div className={`inline-block px-4 py-2 rounded-sm text-white font-bold text-sm tracking-wider min-w-[140px] text-center shadow-md transition-transform group-hover:scale-105 ${
-                                            activeTab === event.name ? 'bg-[#c9175d]' : 'bg-[#c9175d]/80'
-                                        }`}>
+                                        <div className={`inline-block px-4 py-2 rounded-sm text-white font-bold text-sm tracking-wider min-w-[140px] text-center shadow-md transition-transform group-hover:scale-105 ${activeTab === event.name ? 'bg-[#c9175d]' : 'bg-[#c9175d]/80'
+                                            }`}>
                                             {event.yearMonth.toUpperCase()}
                                         </div>
                                     </td>
@@ -70,7 +68,7 @@ export default function InternationalGallery({ events }: InternationalGalleryPro
                                     {/* Flag */}
                                     <td className="px-8 py-6">
                                         <div className="relative w-12 h-8 shadow-sm rounded-sm overflow-hidden border border-gray-100">
-                                            <Image 
+                                            <Image
                                                 src={`https://flagcdn.com/w80/${event.flag.toLowerCase()}.png`}
                                                 alt={`${event.flag} flag`}
                                                 fill
@@ -104,7 +102,7 @@ export default function InternationalGallery({ events }: InternationalGalleryPro
 
             {/* Gallery Section - Only show if an event is selected */}
             {activeTab && (
-                <div 
+                <div
                     ref={galleryRef}
                     className="pt-12 scroll-mt-24"
                 >

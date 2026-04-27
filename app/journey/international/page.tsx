@@ -16,19 +16,20 @@ function getInternationalEvents() {
 
     // Manual metadata mapping for folders to match image style
     const metadataMap: Record<string, { yearMonth: string, flag: string, country: string, festival: string }> = {
-        'LONDON 2012': { yearMonth: '2012 | JULY', flag: 'gb', country: 'UK', festival: 'WORLD CULTURAL FESTIVAL LONDON' },
-        'LONDON 2015': { yearMonth: '2015 | AUGUST', flag: 'gb', country: 'UK', festival: 'INTERNATIONAL FOLK FESTIVAL' },
-        'LONDON 2018': { yearMonth: '2018 | JUNE', flag: 'gb', country: 'UK', festival: 'EUROPEAN FOLKESTRA' },
-        'FRANCE 2015': { yearMonth: '2015 | JULY', flag: 'fr', country: 'FRANCE', festival: 'FESTIVAL DES CULTURES DU MONDE' },
-        'POLAND 2010': { yearMonth: '2010 | AUGUST', flag: 'pl', country: 'POLAND', festival: 'INTERNATIONAL FESTIVAL OF FOLKLORE' },
-        'CYPRUS': { yearMonth: '2017 | SEPT', flag: 'cy', country: 'CYPRUS', festival: 'INTERNATIONAL FOLK DANCE FESTIVAL' },
-        '2023': { yearMonth: '2023 | JAN', flag: 'in', country: 'INDIA', festival: 'WORLD RECORD TRIBUTE TO MAHATMA GANDHI' },
-        '2019': { yearMonth: '2019 | MATCH', flag: 'in', country: 'INDIA', festival: 'NATIONAL CULTURAL EXCHANGE' },
+        'POLAND 2010': { yearMonth: '2010 ', flag: 'pl', country: 'POLAND', festival: 'INTERNATIONAL CHILDREN’S FOLK DANCE FESTIVAL' },
+        'LONDON 2012': { yearMonth: '2012 ', flag: 'gb', country: 'LONDON', festival: 'REPRESENTED INDIAN CULTURE' },
+        'FRANCE 2015': { yearMonth: '2015 ', flag: 'fr', country: 'FRANCE', festival: 'INTERNATIONAL CHILDREN’S FOLK DANCE FESTIVAL' },
+        'LONDON 2018': { yearMonth: '2018 ', flag: 'gb', country: 'LONDON', festival: 'PARTICIPATED IN KINGSTON  CARNIVAL' },
+        'LONDON 2019': { yearMonth: '2019 ', flag: 'gb', country: 'LONDON', festival: 'REPRESENTED INDIAN CULTURE' },
+        'POLAND 2023': { yearMonth: '2023 ', flag: 'pl', country: 'POLAND', festival: 'PARTICIPATE TO INTERNATIONAL CHILDREN’S FOLK DANCE FESTIVAL' },
+        'LONDON 2024': { yearMonth: '2024 ', flag: 'gb', country: 'LONDON', festival: 'REPRESENTED INDIAN CULTURE' },
+        'LONDON 2025': { yearMonth: '2025 ', flag: 'gb', country: 'LONDON', festival: 'REPRESENTED INDIAN CULTURE' },
     }
 
     const events = items.filter(item => {
         const fullPath = path.join(imagesDirectory, item)
-        return fs.statSync(fullPath).isDirectory()
+        // Only show folders that are in our metadata map
+        return fs.statSync(fullPath).isDirectory() && metadataMap[item]
     }).map(dirName => {
         const dirPath = path.join(imagesDirectory, dirName)
         const files = fs.readdirSync(dirPath)
@@ -37,12 +38,7 @@ function getInternationalEvents() {
             .filter(file => /\.(jpg|jpeg|png|webp|JPG|JPEG|PNG)$/.test(file))
             .map(file => `/internatimg/${dirName}/${file}`)
 
-        const meta = metadataMap[dirName] || {
-            yearMonth: dirName.match(/\d{4}/) ? `${dirName.match(/\d{4}/)?.[0]} | EVENT` : `${dirName} | EVENT`,
-            flag: dirName.toLowerCase().includes('london') ? 'gb' : 'in',
-            country: dirName.toUpperCase(),
-            festival: 'INTERNATIONAL CULTURAL PERFORMANCE'
-        }
+        const meta = metadataMap[dirName] // We know it exists due to filter
 
         return {
             name: dirName,
