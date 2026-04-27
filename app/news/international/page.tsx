@@ -57,7 +57,7 @@ export default function InternationalNewsPage() {
                             International News & Media
                         </h2>
                         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                            RangSagar Dance Academy featured in international publications and media around the world.
+                            Dynamice Children Academy featured in international publications and media around the world.
                         </p>
                     </div>
 

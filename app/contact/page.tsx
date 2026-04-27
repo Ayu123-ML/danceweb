@@ -66,7 +66,7 @@ export default function ContactPage() {
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Our Location</h3>
                             <p className="text-gray-600 text-sm">
-                                RangSagar Dance Academy<br />
+                                Dynamice Children Academy<br />
                                 Main Street, City Center<br />
                                 Gujarat, India
                             </p>
@@ -91,8 +91,8 @@ export default function ContactPage() {
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Email Address</h3>
                             <p className="text-gray-600 text-sm">
-                                info@rangsagar.com<br />
-                                admissions@rangsagar.com
+                                info@dynamicechildrenacademy.com<br />
+                                admissions@dynamicechildrenacademy.com
                             </p>
                         </div>
 
@@ -264,7 +264,7 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="RangSagar Location"
+                                    title="Dynamice Children Academy Location"
                                 />
                             </div>
 

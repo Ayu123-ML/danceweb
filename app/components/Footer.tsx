@@ -111,12 +111,12 @@ const Footer = () => {
                                     <span className="font-bold">र</span>
                                 </div>
                                 <div>
-                                    <h2 className="text-2xl font-bold">RangSagar</h2>
+                                    <h2 className="text-2xl font-bold">Dynamice Children Academy</h2>
                                     <p className="text-sm text-gray-300">Dance Academy</p>
                                 </div> */}
                                 <Image
                                     src="/logodance.png"
-                                    alt="Danza"
+                                    alt="Dynamice Children Academy"
                                     width={120}
                                     height={50}
                                     className="w-[120px] h-auto object-contain"
@@ -188,7 +188,7 @@ const Footer = () => {
                     <div className="border-t border-gray-800 pt-8">
                         <div className="flex flex-col md:flex-row justify-between items-center">
                             <p className="text-gray-400 mb-4 md:mb-0">
-                                &copy; {new Date().getFullYear()} Dynamic Dance Academy. All rights reserved.
+                                &copy; {new Date().getFullYear()} Dynamice Children Academy. All rights reserved.
                             </p>
                             <div className="flex items-center space-x-6">
                                 <a href="#" className="text-gray-400 hover:text-white transition">
@@ -204,7 +204,7 @@ const Footer = () => {
                         </div>
                         <div className="text-center mt-6">
                             <p className="text-gray-500 text-sm flex items-center justify-center gap-1">
-                                Made with <Heart size={14} className="text-red-500 fill-current" /> by Dynamics Team
+                                Made with <Heart size={14} className="text-red-500 fill-current" /> by Dynamice Team
                             </p>
                         </div>
                     </div>

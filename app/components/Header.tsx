@@ -61,7 +61,7 @@ const Header = () => {
                             <div>
                                 <Image
                                     src="/logodance.png"
-                                    alt="Danza"
+                                    alt="Dynamice Children Academy"
                                     width={120}
                                     height={50}
                                     className="w-[120px] h-auto object-contain"

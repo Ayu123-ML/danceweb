@@ -8,7 +8,7 @@ const UpcomingEvents = () => {
             title: 'Annual Dance Festival',
             date: '15 Dec 2024',
             time: '6:00 PM',
-            venue: 'RangSagar Auditorium',
+            venue: 'Dynamice Children Academy Auditorium',
             description: 'Grand showcase featuring all dance forms',
             seats: 120,
             price: 'Free',

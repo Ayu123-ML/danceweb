@@ -71,7 +71,7 @@ export default function AboutPage() {
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
                                     src="/aboutimg1.png"
-                                    alt="About RangSagar"
+                                    alt="About Dynamice Children Academy"
                                     width={600}
                                     height={500}
                                     className="w-full h-auto object-cover"

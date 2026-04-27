@@ -134,7 +134,7 @@ export default function NationalJourneyPage() {
                         Want to be part of our journey?
                     </h3>
                     <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-                        Join RangSagar and participate in national events and competitions.
+                        Join Dynamice Children Academy and participate in national events and competitions.
                     </p>
                     <Link
                         href="/contact"

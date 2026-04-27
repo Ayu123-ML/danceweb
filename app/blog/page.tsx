@@ -22,7 +22,7 @@ const blogPosts: BlogPost[] = [
         title: 'The Vibrancy of Folk Dance: Celebrating Tradition',
         excerpt: 'Explore the colorful world of Indian folk dances, where every step tells a story of heritage and community spirit.',
         image: '/folkdnc/fd1.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'December 10, 2024',
         category: 'Folk Dance',
         slug: 'vibrancy-of-folk-dance'
@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
         title: 'Bollywood Dance: The Rhythm of India',
         excerpt: 'Experience the energy and expression of Bollywood dance, a fusion of styles that captures the heart of Indian cinema.',
         image: '/bollywoodnc/bd1.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'December 8, 2024',
         category: 'Bollywood',
         slug: 'bollywood-dance-rhythm'
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
         title: 'Contemporary Dance: fluidity in Motion',
         excerpt: 'Discover the freedom of movement in contemporary dance, blending techniques to create unique emotional expressions.',
         image: '/contemporarydnc/cd1.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'December 5, 2024',
         category: 'Contemporary',
         slug: 'contemporary-dance-fluidity'
@@ -52,7 +52,7 @@ const blogPosts: BlogPost[] = [
         title: 'Unity in Diversity: Folk Dances Across Regions',
         excerpt: 'From Garba to Bhangra, witness how folk dances unite diverse cultures through shared rhythms and joy.',
         image: '/folkdnc/fd2.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'December 2, 2024',
         category: 'Folk Dance',
         slug: 'unity-in-diversity-folk'
@@ -62,7 +62,7 @@ const blogPosts: BlogPost[] = [
         title: 'Expressions in Bollywood: More Than Just Steps',
         excerpt: 'Learn how facial expressions and body language play a crucial role in bringing Bollywood dance performances to life.',
         image: '/bollywoodnc/bd2.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'November 28, 2024',
         category: 'Bollywood',
         slug: 'expressions-in-bollywood'
@@ -72,7 +72,7 @@ const blogPosts: BlogPost[] = [
         title: 'The Innovation of Modern Dance',
         excerpt: 'How modern contemporary styles are pushing the boundaries of traditional dance forms.',
         image: '/contemporarydnc/cd2.JPG',
-        author: 'Rangsagar Team',
+        author: 'Dynamice Children Academy Team',
         date: 'November 25, 2024',
         category: 'Contemporary',
         slug: 'innovation-modern-dance'

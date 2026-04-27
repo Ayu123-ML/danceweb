@@ -138,7 +138,7 @@ export default function InternationalJourneyPage() {
                         Be Part of Our Global Journey
                     </h3>
                     <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-                        Join RangSagar and get opportunities to perform on international stages.
+                        Join Dynamice Children Academy and get opportunities to perform on international stages.
                     </p>
                     <Link
                         href="/contact"

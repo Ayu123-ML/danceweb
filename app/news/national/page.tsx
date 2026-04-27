@@ -10,7 +10,7 @@ interface NewsImage {
 }
 
 const nationalNewsImages: NewsImage[] = [
-    { src: '/nationews/news1.tif', alt: 'National Events Coverage 2007', caption: 'RangSagar featured in national media coverage' },
+    { src: '/nationews/news1.tif', alt: 'National Events Coverage 2007', caption: 'Dynamice Children Academy featured in national media coverage' },
     { src: '/nationews/news2.jpg', alt: 'National Events Coverage 2011', caption: 'Dance academy receives recognition for excellence' },
     { src: '/nationews/news3.tif', alt: 'National Events Coverage', caption: 'Award ceremony coverage and highlights' },
     { src: '/nationews/news4.tif', alt: 'National Events Coverage', caption: 'Cultural event performance showcase' },
@@ -67,7 +67,7 @@ export default function NationalNewsPage() {
                             National News & Media
                         </h2>
                         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                            RangSagar Dance Academy featured in newspapers, magazines, and media across India.
+                            Dynamice Children Academy featured in newspapers, magazines, and media across India.
                         </p>
                     </div>
 
