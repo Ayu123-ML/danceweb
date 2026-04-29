@@ -83,7 +83,7 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
     return (
         <section className="relative py-16 md:py-24 bg-linear-to-b from-gray-50 to-white overflow-hidden">
             {/* Decorative Side Images */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 
+            {/* <div className="absolute top-1/2 left-0 -translate-y-1/2 
                 w-[300px] md:w-[500px] lg:w-[700px] 
                 opacity-100 pointer-events-none z-10">
                 <img
@@ -91,9 +91,9 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
                     alt=""
                     className="w-full h-150 object-contain"
                 />
-            </div>
+            </div> */}
 
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 
+            {/* <div className="absolute top-1/2 right-0 -translate-y-1/2 
                 w-[300px] md:w-[500px] lg:w-[700px] 
                 opacity-100 pointer-events-none z-10">
                 <img
@@ -101,80 +101,77 @@ export default function Stats({ activeProgram, setActiveProgram }: ThreetypeProp
                     alt=""
                     className="w-full h-150 object-contain"
                 />
-            </div>
+            </div> */}
 
 
-            <div className="container mx-auto px-4">
+            <div className="w-full px-5 md:px-10">
                 {/* Program Tabs */}
-                <div
-                    className="flex flex-wrap justify-center gap-3 mb-12"
-                    role="tablist"
-                    aria-label="Programs"
-                >
-                    {programs.map((program) => (
-                        <button
-                            key={program.id}
-                            onClick={() => setActiveProgram(program.id)}
-                            style={{
-                                backgroundColor: activeProgram === program.id ? program.color : 'white',
-                                borderColor: activeProgram === program.id ? program.color : '#e5e7eb',
-                                color: activeProgram === program.id ? 'white' : '#374151',
-                                boxShadow: activeProgram === program.id
-                                    ? `0 10px 15px -3px ${program.color}40, 0 4px 6px -4px ${program.color}40`
-                                    : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
-                            }}
-                            className={`px-8 py-4 rounded-xl font-bold text-sm md:text-base border transition-all duration-300 whitespace-nowrap uppercase tracking-wider ${activeProgram === program.id
-                                ? 'scale-105 shadow-xl'
-                                : 'hover:border-gray-300 hover:shadow-md hover:-translate-y-0.5'
-                                }`}
-                            role="tab"
-                            aria-selected={activeProgram === program.id}
-                        >
-                            {program.name}
-                        </button>
-                    ))}
+                <div className="w-full overflow-x-auto pb-4 mb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <div
+                        className="flex flex-row justify-start md:justify-center items-center gap-[10px] md:gap-[15px] px-4 min-w-max md:min-w-0 mx-auto font-sans"
+                        role="tablist"
+                        aria-label="Programs"
+                    >
+                        {programs.map((program) => {
+                            const isActive = activeProgram === program.id;
+                            return (
+                                <button
+                                    key={program.id}
+                                    onClick={() => setActiveProgram(program.id)}
+                                    style={{
+                                        backgroundColor: program.color,
+                                        borderRadius: '25px',
+                                        padding: '10px 20px',
+                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                                    }}
+                                    className={`
+                                        text-white text-sm md:text-base font-bold whitespace-nowrap uppercase tracking-wider
+                                        border-none transition-all duration-300 ease-in-out
+                                        hover:scale-105 hover:brightness-110
+                                        ${isActive ? 'scale-105 opacity-100' : 'opacity-70'}
+                                    `}
+                                    role="tab"
+                                    aria-selected={isActive}
+                                >
+                                    {program.name}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
 
                 {/* Content Panel */}
-                <div className="max-w-6xl mx-auto">
+                <div className="w-full mx-auto">
                     <div
-                        className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500"
+                        className="bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden transition-all duration-500 w-full"
                         role="tabpanel"
                     >
-
-                        <div className="flex flex-col lg:flex-row">
+                        <div className="flex flex-col md:flex-row w-full min-h-[500px]">
                             {/* Text Content */}
-                            <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center">
-                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                            <div className="w-full md:w-[60%] lg:w-[50%] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                                <h3 className="text-[32px] md:text-[36px] lg:text-[40px] font-extrabold text-gray-900 mb-6 leading-tight">
                                     {currentProgram.title}
                                 </h3>
-                                <div className="text-gray-600 leading-relaxed text-base md:text-lg">
+                                <div className="text-gray-600 leading-[1.8] text-base md:text-lg">
                                     {currentProgram.description.split('\n\n').map((paragraph, idx) => (
-                                        <p key={idx} className="mb-4 last:mb-0">
+                                        <p key={idx} className="mb-6 last:mb-0">
                                             {paragraph}
                                         </p>
                                     ))}
                                 </div>
-                                <div className="mt-8">
-                                    {/* <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5">
-                                        Learn More
-                                    </button> */}
-                                </div>
                             </div>
 
                             {/* Image */}
-                            <div className="lg:w-1/2 relative">
-                                <div className="aspect-4/3 lg:aspect-auto lg:h-full relative overflow-hidden">
-                                    <Image
-                                        src={currentProgram.image}
-                                        alt={currentProgram.title}
-                                        fill
-                                        className="object-cover transition-transform duration-700 hover:scale-105"
-                                        sizes="(max-width: 1024px) 100vw, 50vw"
-                                    />
-                                    {/* Gradient Overlay */}
-                                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent lg:bg-linear-to-r lg:from-white lg:via-transparent lg:to-transparent" />
-                                </div>
+                            <div className="w-full md:w-[40%] lg:w-[50%] relative min-h-[400px] md:min-h-auto">
+                                <Image
+                                    src={currentProgram.image}
+                                    alt={currentProgram.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 40vw, 50vw"
+                                />
+                                {/* Optional gradient overlay for modern look */}
+                                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-black/20 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                         </div>
                     </div>

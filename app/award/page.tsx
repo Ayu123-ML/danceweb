@@ -215,6 +215,14 @@ const awardData = [
         image: '/awardimg/26.jpg',
         description: 'The highest honor bestowed at the National Dance Championship.'
     },
+    {
+        id: '27',
+        title: 'International Cultural Exchange Program',
+        category: 'National Championship',
+        year: '2023',
+        image: '/awardimg/27.jpg',
+        description: 'Our talented team proudly secured the prestigious Grand Prix Winner title at the National Dance Championship 2023. This remarkable achievement reflects their dedication, discipline, and outstanding performance on a national stage. Competing against top talented participants from across the country, our students showcased exceptional coordination, creativity, and confidence, earning the highest honor in the competition.'
+    },
 ]
 
 export default function AwardPage() {

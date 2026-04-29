@@ -4,9 +4,9 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 const galleryImages = [
-    '/bollywoodnc/bd2.JPG',
-    '/bollywoodnc/bd3.JPG',
-    '/bollywoodnc/bd4.JPG',
+    '/spi.jpg',
+    '/3.jpg',
+
 ]
 
 export default function Spiritualtype() {

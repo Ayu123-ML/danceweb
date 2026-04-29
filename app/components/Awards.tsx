@@ -18,6 +18,13 @@ const awardImages = [
     '/awardimg/11.jpg',
     '/awardimg/12.jpg',
     '/awardimg/13.jpg',
+    '/awardimg/14.jpg',
+    '/awardimg/15.jpg',
+    '/awardimg/16.jpg',
+    '/awardimg/17.jpg',
+    '/awardimg/18.jpg',
+    '/awardimg/19.jpg',
+
 ]
 
 export default function Awards() {
@@ -52,20 +59,26 @@ export default function Awards() {
 
                 <div className="relative w-full mx-auto">
                     {/* Main Image Container (Enlarged and Proportional) */}
-                    <div className="relative h-[1000px] md:h-[550px] w-[1550px] overflow-hidden shadow-2xl border-white transition-all duration-300 ">
+                    <div className="relative w-full h-auto max-w-[1550px] mx-auto overflow-hidden shadow-2xl bg-[#f5f5f5] transition-all duration-300">
                         <div
-                            className="flex h-full w-full transition-transform duration-700 ease-in-out"
+                            className="flex w-full transition-transform duration-700 ease-in-out items-center"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             {awardImages.map((image, index) => (
-                                <div key={index} className="min-w-full h-full relative">
-                                    <Image
-                                        src={image}
-                                        alt={`Award ${index + 1}`}
-                                        fill
-                                        className="object-cover"
-                                        priority={index === 0}
-                                    />
+                                <div
+                                    key={index}
+                                    className="min-w-full flex items-center justify-center p-6 md:p-12"
+                                >
+                                    <div className="w-full flex items-center justify-center">
+                                        <Image
+                                            src={image}
+                                            alt={`Award ${index + 1}`}
+                                            width={1600}
+                                            height={1000}
+                                            className="w-full h-auto max-h-[600px] object-contain"
+                                            priority={index === 0}
+                                        />
+                                    </div>
                                 </div>
                             ))}
                         </div>

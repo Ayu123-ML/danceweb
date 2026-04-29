@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const flags = [
   'ca', 'gb', 'fr', 'es', 'cz',
@@ -20,12 +21,27 @@ const Country: React.FC = () => {
   return (
     <div className="w-full font-sans bg-[#f7f7f7] flex flex-col justify-center">
       {/* Top Section - Associations */}
-      <div className="relative w-full py-16 md:py-20 flex flex-col items-center overflow-hidden">
+      <div className="relative w-full py-20 md:py-[100px] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
 
-        {/* Background Subtle Gradient */}
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-200/50 via-gray-100/20 to-transparent"></div>
+        {/* World Map Background Image */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: "url('/background.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.4
+          }}
+        ></div>
 
-        <div className="z-10 flex flex-col items-center w-full">
+        {/* Very Light Overlay */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+        ></div>
+
+        <div className="z-10 flex flex-col items-center w-full relative">
           {/* <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-12 sm:mb-16 uppercase tracking-wider font-sans">
             ASSOCIATION
           </h2> */}
@@ -68,9 +84,10 @@ const Country: React.FC = () => {
 
         <div className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-5 px-4 pb-4 z-10">
           {flags.map((code) => (
-            <div
+            <Link
+              href="/journey/international"
               key={code}
-              className="relative w-[3.5rem] h-[2.5rem] sm:w-[5rem] sm:h-[3.5rem] md:w-[6.5rem] md:h-[4.5rem] shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-sm overflow-hidden border-[1.5px] border-white/90 group"
+              className="relative block w-[3.5rem] h-[2.5rem] sm:w-[5rem] sm:h-[3.5rem] md:w-[6.5rem] md:h-[4.5rem] shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-sm overflow-hidden border-[1.5px] border-white/90 group cursor-pointer hover:scale-110 hover:shadow-[0_8px_20px_rgba(0,0,0,0.4)] transition-all duration-300"
             >
               <Image
                 src={`https://flagcdn.com/w160/${code}.png`}
@@ -80,8 +97,8 @@ const Country: React.FC = () => {
                 unoptimized
               />
               {/* Glossy Effect Overlay (Optional, matches 3d feel of mockup flags) */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/5 to-transparent opacity-60 pointer-events-none"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/5 to-transparent opacity-60 pointer-events-none group-hover:opacity-30 transition-opacity"></div>
+            </Link>
           ))}
         </div>
       </div>
