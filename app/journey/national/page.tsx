@@ -35,7 +35,7 @@ const nationalImages: GalleryImage[] = [
     { src: '/nationalimg/year23.jpg', alt: 'National Event 2025', caption: 'National Event 2025' },
     { src: '/nationalimg/year24.jpg', alt: 'National Event 2026', caption: 'National Event 2026' },
     { src: '/nationalimg/year25.jpg', alt: 'National Event 2027', caption: 'National Event 2027' },
-    { src: '/nationalimg/year26.jpg', alt: 'National Event 2028', caption: 'National Event 2028' },
+    // { src: '/nationalimg/year26.jpg', alt: 'National Event 2028', caption: 'National Event 2028' },
     { src: '/nationalimg/year27.jpg', alt: 'National Event 2029', caption: 'National Event 2029' },
     { src: '/nationalimg/year28.jpg', alt: 'National Event 2030', caption: 'National Event 2030' },
 

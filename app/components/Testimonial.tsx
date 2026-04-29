@@ -112,7 +112,7 @@ export default function TestimonialSlider() {
     }, [nextSlide])
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center bg-gray-900 py-1 px-4">
+        <section className="relative flex items-center justify-center bg-gray-900 py-2 md:py-4 px-4 overflow-hidden h-[500px] md:h-[550px]">
 
             <div className="absolute top-1/2 left-0 -translate-y-1/2 
                 w-[300px] md:w-[500px] lg:w-[700px] 
@@ -137,6 +137,7 @@ export default function TestimonialSlider() {
 
             <div className="relative w-full max-w-4xl mx-auto">
                 {/* Navigation Arrows */}
+
                 <button
                     onClick={prevSlide}
                     className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-orange-500 transition-colors duration-300"
@@ -159,12 +160,12 @@ export default function TestimonialSlider() {
 
                 {/* Testimonial Content */}
                 <div
-                    className="overflow-hidden rounded-lg bg-gray-800/50 p-6 md:p-8"
+                    className="overflow-hidden rounded-lg bg-gray-800/50 p-2 md:p-4"
                     onTouchStart={onTouchStart}
                     onTouchMove={onTouchMove}
                     onTouchEnd={onTouchEnd}
                 >
-                    <div className="relative h-64 md:h-72">
+                    <div className="relative h-32 md:h-40">
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={testimonial.id}
@@ -175,7 +176,7 @@ export default function TestimonialSlider() {
                             >
                                 <div className="flex flex-col items-center text-center h-full justify-center">
                                     {/* Avatar */}
-                                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-linear-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-4">
+                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-linear-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-1">
                                         <span className="text-white text-xl font-semibold">
                                             <img src={testimonial.avatar} alt={testimonial.name} />
                                             {/* {testimonial.name.charAt(0)} */}
@@ -183,7 +184,7 @@ export default function TestimonialSlider() {
                                     </div>
 
                                     {/* Name */}
-                                    <h2 className="text-xl md:text-2xl font-medium text-orange-500 mb-2">
+                                    <h2 className="text-base md:text-lg font-medium text-orange-500 mb-0">
                                         {testimonial.name}
                                     </h2>
 
@@ -191,7 +192,7 @@ export default function TestimonialSlider() {
                                     {/* <p className="text-gray-400 text-sm mb-4">{testimonial.title}</p> */}
 
                                     {/* Content */}
-                                    <p className="text-gray-200 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+                                    <p className="text-gray-200 max-w-2xl mx-auto text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-none">
                                         {testimonial.content}
                                     </p>
                                 </div>
@@ -201,7 +202,7 @@ export default function TestimonialSlider() {
                 </div>
 
                 {/* Dots Indicator */}
-                <div className="flex justify-center space-x-3 mt-8">
+                <div className="flex justify-center space-x-3 mt-2">
                     {testimonials.map((_, index) => (
                         <button
                             key={index}

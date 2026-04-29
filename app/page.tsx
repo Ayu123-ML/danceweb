@@ -10,7 +10,6 @@ import ProgramSection from './components/ProgramSection'
 import Testimonial from './components/Testimonial'
 import Country from './components/Country'
 import Awards from './components/Awards'
-import ImageGallery from './components/ImageGallery'
 
 export default function Home() {
   return (
@@ -21,8 +20,10 @@ export default function Home() {
       <ProgramSection />
       <Awards />
       <Country />
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
+      <Mission />
       <Testimonial />
+      <FounderSection />
       <hr className="text-white" />
       {/* <Team /> */}
       <Contactus />
