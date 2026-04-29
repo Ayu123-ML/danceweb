@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Globe, Award, Newspaper } from 'lucide-react'
@@ -23,6 +24,8 @@ const internationalNewsImages: NewsImage[] = [
 ]
 
 export default function InternationalNewsPage() {
+    const [selectedImage, setSelectedImage] = useState<NewsImage | null>(null)
+
     return (
         <main>
             {/* Breadcrumb Section */}
@@ -62,11 +65,12 @@ export default function InternationalNewsPage() {
                     </div>
 
                     {/* News Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {internationalNewsImages.map((news, index) => (
                             <figure
                                 key={index}
-                                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                                onClick={() => setSelectedImage(news)}
+                                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                             >
                                 <div className="aspect-[4/3] relative overflow-hidden">
                                     <Image
@@ -133,6 +137,38 @@ export default function InternationalNewsPage() {
                     </Link>
                 </div>
             </section>
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        className="absolute top-6 right-6 text-white/80 hover:text-white text-4xl font-bold z-50 bg-black/50 hover:bg-black/70 rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300"
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            setSelectedImage(null)
+                        }}
+                        aria-label="Close"
+                    >
+                        &times;
+                    </button>
+
+                    <div className="relative w-full h-full max-w-5xl max-h-[85vh]" onClick={(e) => e.stopPropagation()}>
+                        <Image
+                            src={selectedImage.src}
+                            alt={selectedImage.alt}
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                        {selectedImage.caption && (
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white px-6 py-3 rounded-xl text-center max-w-[90%] border border-white/10">
+                                <p className="text-sm font-medium">{selectedImage.caption}</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
         </main>
     )
 }

@@ -10,11 +10,13 @@ import ProgramSection from './components/ProgramSection'
 import Testimonial from './components/Testimonial'
 import Country from './components/Country'
 import Awards from './components/Awards'
+import ImageGallery from './components/ImageGallery'
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <HeroScroll />
+      {/* <HeroScroll /> */}
+      <ImageGallery />
       <TextScroll />
       <ProgramSection />
       <Awards />

@@ -70,7 +70,7 @@ const Country: React.FC = () => {
           {flags.map((code) => (
             <div
               key={code}
-              className="relative w-[3.5rem] h-[2.5rem] sm:w-[5rem] sm:h-[3.5rem] md:w-[6.5rem] md:h-[4.5rem] shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-sm overflow-hidden border-[1.5px] border-white/90 group"
+              className="relative w-14 h-10 sm:w-20 sm:h-14 md:w-26 md:h-18 shadow-[0_4px_10px_rgba(0,0,0,0.2)] rounded-sm overflow-hidden border-[1.5px] border-white/90 group"
             >
               <Image
                 src={`https://flagcdn.com/w160/${code}.png`}
