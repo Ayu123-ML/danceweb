@@ -10,6 +10,9 @@ import ProgramSection from './components/ProgramSection'
 import Testimonial from './components/Testimonial'
 import Country from './components/Country'
 import Awards from './components/Awards'
+import FounderSection from './components/Founder'
+import Mission from './components/Mission'
+import ImageGallery from './components/ImageGallery'
 
 export default function Home() {
   return (
