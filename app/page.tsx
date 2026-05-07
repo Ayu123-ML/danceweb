@@ -26,7 +26,7 @@ export default function Home() {
       {/* <UpcomingEvents /> */}
       <Mission />
       <Testimonial />
-      <FounderSection />
+      {/* <FounderSection /> */}
       <hr className="text-white" />
       {/* <Team /> */}
       <Contactus />
