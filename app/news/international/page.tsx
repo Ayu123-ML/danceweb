@@ -60,7 +60,15 @@ export default function InternationalNewsPage() {
                             International News & Media
                         </h2>
                         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                            Dynamice Children Academy featured in international publications and media around the world.
+                            {/* Dynamice Children Academy featured in international publications and media around the world. */}
+                            Dynamice Children Academy has proudly represented Indian culture and children’s talent through participation in prestigious cultural exchange programs and folklore festivals. Our performances showcasing Indian folk traditions, Garba, classical elements, and modern creativity have been appreciated by audiences across different platforms.
+                            Such opportunities provide children with:
+                            •	International exposure
+                            •	Cultural confidence
+                            •	Stage experience
+                            •	Team spirit and discipline
+                            •	Leadership and communication skills
+
                         </p>
                     </div>
 

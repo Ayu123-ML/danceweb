@@ -93,16 +93,20 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-4 text-gray-600 leading-relaxed">
                                 <p>
-                                    Founded in 2002 by Director Tirthraj Trivedi with just 14 students, our academy has grown into a prestigious institution that has proudly trained more than 6,000 young learners. Guided by a strong vision to nurture India’s culture, traditions, and values in the next generation, we have become a trusted platform for children aged 4 to 14 years to learn, express, and shine.
+                                    Welcome to Dynamice Children Academy — a creative and inspiring platform dedicated to nurturing the talents, confidence, and overall development of children.
                                 </p>
                                 <p>
-                                    We are a Government-Registered Institution, a Government-Approved Vocational Training Centre, and a Trademark-Registered Academy under the Government of India. Our commitment to excellence is further strengthened by certifications from IAF and EGAC for maintaining a high-quality management system.
+                                    At our academy, we believe that every child is unique and gifted with limitless potential. Through a combination of creativity, culture, performance, fitness, and personality development, we help children discover their strengths and express themselves with confidence.
                                 </p>
                                 <p>
-                                    Our academy has earned international recognition, marking its name in the London Book of World Records and becoming an esteemed member of CIOFF (International Council of Organizations of Folklore Festivals and Folk Arts) and IOV (International Organization of Folk Art). These affiliations allow our students to proudly represent India on global platforms.
+                                    We offer training in a wide range of activities including Dance, Folk Dance, Drawing, Gymnastics, Drama & Public Speaking, Modelling, Garba, and Spiritual & Cultural Learning. Our programs are specially designed to encourage discipline, creativity, teamwork, stage confidence, communication skills, and personal growth in a positive and motivating environment.
                                 </p>
                                 <p>
-                                    With a mission to instill cultural values, discipline, and artistic excellence, we provide world-class training and international-stage opportunities. We strive to shape ambitious, confident, and culturally enriched young minds who carry the pride and authenticity of India across the world.
+                                    Over the years, Dynamice Children Academy has proudly participated in numerous cultural events, competitions, festivals, and national as well as international programs, earning appreciation for promoting children’s talent and Indian cultural values.
+                                </p>
+                                <p>
+                                    More than just an academy, we are a family that believes in shaping confident, creative, disciplined, and culturally connected young individuals ready to shine in every field of life.
+
                                 </p>
                             </div>
                         </div>
@@ -223,7 +227,7 @@ export default function AboutPage() {
                         </div>
                         <div className="grid lg:grid-cols-3 gap-10 text-gray-600 leading-relaxed text-lg">
                             <p>
-                                The media has played a pivotal role in documenting our academy’s growth, sharing our story of cultural preservation with the world. We are profoundly grateful for the recognition received from respected media houses, whose coverage has highlighted our initiatives in over 200 print articles. These features celebrate our dedication to youth development and our contributions to the global artistic community.
+                                The media has played a pivotal role in documenting our academy's growth, sharing our story of cultural preservation with the world. We are profoundly grateful for the recognition received from respected media houses, whose coverage has highlighted our initiatives in over 200 print articles. These features celebrate our dedication to youth development and our contributions to the global artistic community.
                             </p>
                             <p>
                                 Our mission has been further amplified through more than 60 electronic media and press news channels, bringing our vision into countless homes nationwide. This consistent national presence has been instrumental in establishing our academy as a trusted name for cultural education. By sharing our students&apos; accomplishments, these platforms have helped us inspire a new generation to embrace their heritage with pride.
@@ -237,9 +241,9 @@ export default function AboutPage() {
             </section>
 
             {/* <Team /> */}
-            {/* <section className="bg-gradient-to-r from-pink-700 to-pink-600 text-white py-16 px-6 relative overflow-hidden h-full">
+            <section className="bg-[#C9175D] text-white py-16 px-6 relative overflow-hidden h-full">
 
-           
+
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold">Company</h2>
                     <h3 className="text-3xl font-bold mt-2">Founder / Director</h3>
@@ -247,24 +251,24 @@ export default function AboutPage() {
 
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-                   
+
                     <div className="text-center">
                         <div className="bg-white rounded-3xl p-4 inline-block shadow-lg">
                             <img
-                                src="/founder.jpg" 
-                                alt="Naresh Patel"
+                                src="/1.png"
+                                alt="Tirthraj Trivedi"
                                 className="rounded-2xl w-72 h-80 object-cover"
                             />
                         </div>
 
-                        <h3 className="text-2xl font-bold mt-6">Naresh Patel</h3>
+                        <h3 className="text-2xl font-bold mt-6">Tirthraj Trivedi</h3>
                         <p className="text-sm mt-2">
-                            Director Rangasagar Performing Arts <br />
-                            International Culture Representative. <br />
-                            World Record Holder.
+                            Founder & Director of Dynamice Children Academy
+                            International Culture Representative & Performing Arts Mentor
+                            World Record Holder | Expert in Dance, Acting, Modeling & Creative Education
                         </p>
 
-                    
+
                         <div className="flex justify-center gap-4 mt-6 text-xl">
                             {[
                                 { icon: <Facebook size={20} />, url: 'https://www.facebook.com/navinvato/videos/-dynamic-children-academy-%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4-%E0%AA%A8%E0%AB%80-%E0%AA%A8%E0%AA%82%E0%AA%AC%E0%AA%B0-1-kids-talent-hub%E0%AA%85%E0%AA%B9%E0%AB%80%E0%AA%82-%E0%AA%AC%E0%AA%BE%E0%AA%B3%E0%AA%95%E0%AB%8B-%E0%AA%AE%E0%AA%BE%E0%AA%A4%E0%AB%8D%E0%AA%B0-activ/4250374635282583/', label: 'Facebook' },
@@ -288,20 +292,20 @@ export default function AboutPage() {
 
                     <div className="text-sm leading-relaxed space-y-4">
                         <p>
-                            BORN AND BROUGHT UP– HIMMATNAGAR GUJARAT, BELONGS TO AN ORDINARY FARMER FAMILY WHO kept nature as his source of inspiration for folk music and dance. Fascinated with music from the beginning and he started singing bhajans folk songs and devotional songs.
+                            Born and brought up in Himmatnagar, he comes from a humble family background where culture, tradition, and creativity became the foundation of his artistic journey. Inspired by Indian folk music, dance, and cultural values from an early age, he developed a deep passion for performing arts and cultural education.
                         </p>
 
                         <p>
-                            Education and journey–Naresh has a Masters in Hindustani Music from J.G. College of Performing Arts, affiliated to Gujarat University, Ahmedabad. This is where he came in contact with teachers whom he owes for enhancing his passion.
+                           He pursued his education in performing arts with dedication and professional training, shaping his expertise in dance, music, acting, and stage performance. Through years of hard work and creative excellence, he established himself as a mentor, performer, and cultural representative committed to nurturing young talent and promoting Indian culture globally.
                         </p>
 
                         <p>
-                            Promotion of Indian culture in different countries –Naresh vision to promote Indian culture worldwide. His group has performed in 50+ international festivals and received multiple awards globally.
+                            With a vision to inspire the next generation through creativity and discipline, his academy has become a platform for students to explore dance, acting, modeling, and artistic expression. His team has proudly represented Indian culture at numerous national and international events, earning recognition, awards, and appreciation across the globe.
                         </p>
                     </div>
 
                 </div>
-            </section> */}
+            </section>
 
             <section className="py-20 bg-linear-to-r from-primary-600 to-primary-800">
                 <div className="container mx-auto px-4 text-center">

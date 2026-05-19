@@ -70,7 +70,10 @@ export default function NationalNewsPage() {
                             National News & Media
                         </h2>
                         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                            Dynamice Children Academy featured in newspapers, magazines, and media across India.
+                            {/* Dynamice Children Academy featured in newspapers, magazines, and media across India. */}
+                                 At Dynamice Children Academy, every achievement is a reflection of our commitment towards nurturing creativity, confidence, culture, and talent in children. Over the past years, our academy has proudly earned recognition through various newspapers, digital media platforms, cultural events, educational programs, and community celebrations.
+                                 From vibrant dance performances and cultural festivals to drawing competitions, gymnastics showcases, public speaking events, modelling activities, and social awareness programs — our students have continuously made their mark with excellence and discipline.
+
                         </p>
                     </div>
 
