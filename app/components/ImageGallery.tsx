@@ -87,6 +87,7 @@ const images = [
   },
 ]
 
+
 export default function ImageGallery() {
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -100,7 +101,10 @@ export default function ImageGallery() {
   }, [nextSlide])
 
   return (
-    <section className="py-1 bg-gray-50 w-full flex justify-center">
+
+    
+    <section className="relative py-1 bg-gray-50 w-full flex justify-center">
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: "url('/background.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', opacity: 0.4 }}></div>
       <div className="w-full max-w-[1400px] px-4 md:px-8">
         {/* <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
