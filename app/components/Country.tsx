@@ -9,7 +9,7 @@ const flags = [
 ];
 
 const logos = [
-  // '/s1-Photoroom.png',
+  '/s1-Photoroom.png',
   '/s3-Photoroom.png',
   '/s4-Photoroom.png',
   '/s5-Photoroom.png',
